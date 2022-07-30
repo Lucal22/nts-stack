@@ -1,10 +1,15 @@
-import React from 'react'
-import type { AppProps } from 'next/app'
-import '../styles/index.css'
-
+import { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from '../styles/global-styles';
+import { theme } from '../styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+      <GlobalStyles />
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

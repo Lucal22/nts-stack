@@ -1,8 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import { createGlobalStyle } from 'styled-components';
 
-html,
+export const GlobalStyles = createGlobalStyle`
+  html,
 body {
   padding: 0;
   margin: 0;
@@ -18,3 +17,4 @@ a {
 * {
   box-sizing: border-box;
 }
+`;

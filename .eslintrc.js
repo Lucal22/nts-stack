@@ -10,7 +10,6 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'plugin:tailwindcss/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,7 +19,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['tailwindcss', 'react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint'],
   settings: {
     react: {
       version: 'detect',
@@ -29,12 +28,5 @@ module.exports = {
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/react-in-jsx-scope': 'off',
-    'tailwindcss/classnames-order': 'warn',
-    'tailwindcss/enforces-negative-arbitrary-values': 'warn',
-    'tailwindcss/enforces-shorthand': 'warn',
-    'tailwindcss/migration-from-tailwind-2': 'warn',
-    'tailwindcss/no-arbitrary-value': 'off',
-    'tailwindcss/no-custom-classname': 'warn',
-    'tailwindcss/no-contradicting-classname': 'error',
   },
 };
